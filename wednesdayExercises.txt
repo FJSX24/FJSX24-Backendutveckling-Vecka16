@@ -1,0 +1,34 @@
+✏️ Självständiga Övningar med Flera Routers
+
+🟢 Lätta
+
+Skapa en ny router för /orders med GET & POST
+
+Lägg till en GET-route för att hämta alla ordrar.
+
+Lägg till en POST-route för att lägga till en ny order.
+
+🟠 Medelsvåra
+
+Skapa en PUT-route i order-routern för att uppdatera en order.
+
+Implementera en DELETE-route i order-routern för att ta bort en order.
+
+Lägg till en enkel middleware till en router, exempel: En middleware som loggar varje request för alla routers.
+
+
+Flytta dummydata till en separat fil
+
+🔴 Svåra/Avancerade
+
+Skapa en router för /categories och länka den till /products.
+
+Implementera nested routes: GET /products/:id/categories
+
+Implementera autentisering med en middleware som skyddar alla POST-, PUT- och DELETE-anrop.
+
+Lägg till en rate limiting middleware för att skydda API:et mot överbelastning.
+
+🧪 Fråga till reflektion:
+
+Om någon annan teammedlem får ditt API – skulle de förstå hur det fungerar bara genom endpointsens namn och struktur?

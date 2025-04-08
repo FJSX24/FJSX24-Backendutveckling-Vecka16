@@ -1,0 +1,213 @@
+🧭 Workshop – Onsdag v.16
+Datum: 2025-04-16
+Tid: 09.00–12.00
+Plats: Ordinarie schema
+Ämne: Express Router, API-design, RESTful best practices
+
+-----------------------------
+✨ Syfte
+
+Att förstå hur man strukturerar Express-routers för skalbara API:er, följer RESTful designprinciper, samt arbetar med god kodstruktur i backendprojekt. Fokus på praktisk tillämpning av routers och separation av ansvar i filstruktur.
+
+Efter lektionen ska studenterna:
+
+Implementera router-filer för att hantera olika entiteter.
+
+Använda Postman för att testa API:et.
+
+Självständigt skapa en router-fil för en ny entitet (t.ex. produkter).
+
+-----------------------------
+🧠 Agenda
+
+📍 Introduktion – Agenda och mål för dagen
+
+📚 PowerPoint/Teori: Gå igenom vad routing innebär i Express.
+
+💻 Code-Along: Skapa ett API och refaktorisera med routers.
+Använd Postman för att testa API:et.
+
+🧩 Självständiga övningar
+
+🧪 Reflektion & Gruppdiskussion: "Hur RESTful är vårt API?"
+
+✅ Code Review / Snabb demo – Studenter visar upp sina routers
+
+-----------------------------
+📊 PowerPoint Slides
+
+Slide 1: Titel: Routing i Express
+
+Routing innebär att vi kan tala om vad som ska hända vid olika URL:er.
+
+Används för att hantera HTTP-förfrågningar (GET, POST, PUT, DELETE).
+
+🗣️ Talarmanus - Slide 1
+"Hej allihopa! Idag ska vi prata om Routing i Express. Routing innebär att vi kan tala om vad som ska hända vid olika URL:er. Vi använder routing för att hantera olika typer av HTTP-förfrågningar som GET, POST, PUT och DELETE. Att förstå routing är grundläggande för att bygga backend-API:er."
+
+-----------------------------
+Slide 2: Routing i Express
+method - den HTTP-metod som används, t.ex. GET, POST.
+
+path - den URL som efterfrågas.
+
+callback - den funktion som körs när en request matchar.
+
+KOD:
+const express = require('express');
+const app = express();
+
+app.method(path, callback);
+
+🗣️ Talarmanus - Slide 2
+"En route i Express består av tre delar: method, path och callback.
+
+Method anger vilken HTTP-metod som används, som GET eller POST.
+
+Path anger URL:en som vi vill lyssna på.
+
+Callback är den funktion som anropas när en request matchar.
+
+Denna struktur gör det enkelt att hantera olika typer av förfrågningar i vår applikation."
+
+-----------------------------
+Slide 3: Vad är en Router i Express?
+
+En Router är en separat hanterare för olika API-routes.
+
+Gör det möjligt att dela upp koden i mindre moduler.
+
+Fördelar:
+
+Separation av ansvar.
+
+Lättare att underhålla.
+
+Kan ha egna middleware.
+
+
+🗣️ Talarmanus - Slide 3
+"Routers i Express är ett sätt att hantera olika delar av din applikation i separata filer. Istället för att ha all routing i huvudfilen, kan vi dela upp koden i mindre moduler. Detta gör det lättare att underhålla och ger en tydligare separation av ansvar."
+
+-----------------------------
+-----------------------------
+-----------------------------
+💻 Code-Along 
+
+Projektsetup och Strukturering med Express Router:
+
+📝 Projektstruktur efter utvidgning:
+express-router-api/
+├── index.js          # Huvudfil för servern
+├── package.json      # Paketkonfiguration
+├── routes/           # Mapp för alla router-filer
+│   ├── users.js       # Router-fil för användare
+│   └── products.js    # Router-fil för produkter
+└── node_modules/     # Installerade paket
+
+-----------------------------
+🔧 1. Skapa projekt och installera Express
+npm init -y
+npm install express
+
+-----------------------------
+🔧 1. Skapa och flytta users till ny router-fil från index till routes/users.js
+
+genomför den koden
+
+-----------------------------
+📝 2. Uppdatera huvudfilen för att använda users
+index.js
+
+genomför den koden
+
+-----------------------------
+🔧 3. Skapa en ny router-fil för produkter
+routes/products.js
+
+genomför den koden
+
+-----------------------------
+📝 4. Uppdatera huvudfilen för att kombinera flera routers
+index.js
+
+genomför den koden
+
+-----------------------------
+-----------------------------
+-----------------------------
+✅ Testning av Flera Routers
+
+🔧 Starta servern
+node index.js
+
+🌐 Testa endpoints med Postman:
+
+🧑 Användare
+
+GET alla användare:
+http://localhost:8000/api/users
+
+POST ny användare:
+http://localhost:8000/api/users
+
+Body:
+{
+  "id": 3,
+  "name": "Oskar"
+}
+
+DELETE användare:
+http://localhost:8000/api/users/1
+
+🛒 Produkter
+
+GET alla produkter:
+http://localhost:8000/api/products
+
+POST ny produkt:
+http://localhost:8000/api/products
+
+Body:
+{
+  "id": 3,
+  "name": "Headphones"
+}
+
+DELETE produkt:
+http://localhost:8000/api/products/1
+
+🗣️ Talarmanus - Kombinera Flera Routers
+"Nu har vi skapat en till router för att hantera produkter. Detta gör vårt API mer strukturerat eftersom vi nu har en dedikerad router för användare och en annan för produkter.
+
+I huvudfilen (index.js) kopplar vi ihop dessa routers med olika basvägar:
+
+/api/users för användarhantering
+
+/api/products för produkthantering
+
+Genom att använda flera routers får vi en mycket mer skalbar och överskådlig applikation. Det gör det också enkelt att lägga till fler routers i framtiden om vi vill hantera fler resurser."
+
+-----------------------------
+-----------------------------
+-----------------------------
+Dags för övningar
+
+-----------------------------
+-----------------------------
+-----------------------------
+🧪 Reflektion & Diskussion (15 min)
+
+Hur hjälper routers oss strukturera applikationen?
+
+Hur kan vi tänka RESTfullt när vi bygger endpoints?
+
+Hur kan vi använda denna struktur i Chas Challenge?
+
+-----------------------------
+-----------------------------
+-----------------------------
+📝 Sammanfattning
+"Hej allihopa! Nu har vi sett hur man hanterar flera routers i samma applikation, och hur man kopplar dem till olika basvägar i huvudfilen. Genom att använda flera routers gör vi vår applikation mycket mer strukturerad och lätt att underhålla.
+
+Att arbeta med flera routers är en viktig del av att bygga större och mer skalbara system, särskilt när API:et växer med flera resurser. Bra jobbat idag! 💪"
