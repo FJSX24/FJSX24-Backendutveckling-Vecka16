@@ -1,0 +1,25 @@
+✏️ Självständiga Övningar
+
+🟢 Lätta Övningar
+
+- Skapa en router-fil för produkter med GET och POST.
+
+- Lägg till en Swagger-dokumentation för produkt-API:et.
+
+--------------------------------------
+--------------------------------------
+--------------------------------------
+🟠 Medelsvåra Övningar
+
+- Implementera en PUT-metod för att uppdatera användarinformation.
+
+- Dokumentera PUT-metoden i Swagger.
+
+--------------------------------------
+🔴 Svåra Övningar
+
+- Skapa en DELETE-metod för att radera en användare.
+
+- Lägg till CORS-stöd med hjälp av cors-biblioteket.
+
+- Dokumentera DELETE-metoden i Swagger.
