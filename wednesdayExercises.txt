@@ -14,8 +14,7 @@ Skapa en PUT-route i order-routern för att uppdatera en order.
 
 Implementera en DELETE-route i order-routern för att ta bort en order.
 
-Lägg till en enkel middleware till en router, exempel: En middleware som loggar varje request för alla routers.
-
+Lägg till en enkel middleware till en router, exempel: En middleware som loggar varje request för alla routers och en för en specifik route.
 
 Flytta dummydata till en separat fil
 
@@ -29,6 +28,23 @@ Implementera autentisering med en middleware som skyddar alla POST-, PUT- och DE
 
 Lägg till en rate limiting middleware för att skydda API:et mot överbelastning.
 
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
 🧪 Fråga till reflektion:
 
 Om någon annan teammedlem får ditt API – skulle de förstå hur det fungerar bara genom endpointsens namn och struktur?
+
+Hur hjälper routers oss strukturera applikationen?
+
+Hur kan vi använda denna struktur i Chas Challenge?
+
+Hur kan vi tänka RESTfullt när vi bygger endpoints? (Passar med för morgondagens lektion)
+
+-----------------------------------------------
+Extra: 
+
+Se video om MVC: https://www.youtube.com/watch?v=Cgvopu9zg8Y
+
+Diskussion och teori letande om headless vs Coupled / Monolithic / Traditional
+Vad är dom? Fördelar/nackdelar?
