@@ -191,6 +191,14 @@ Genom att använda flera routers får vi en mycket mer skalbar och överskådlig
 -----------------------------
 -----------------------------
 -----------------------------
+Se video om MVC
+
+Diskussion och teori letande om headless vs Coupled / Monolithic / Traditional
+Vad är dom? Fördelar/nackdelar?
+
+-----------------------------
+-----------------------------
+-----------------------------
 Dags för övningar
 
 -----------------------------
