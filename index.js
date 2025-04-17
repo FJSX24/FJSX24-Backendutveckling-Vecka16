@@ -16,6 +16,43 @@ const swaggerOptions = {
       description: "API-dokumentation med Swagger",
       version: "1.0.0",
     },
+    servers: [
+      {
+        url: "http://localhost:8000",
+        description: "Local dev server",
+      },
+    ],
+    components: {
+      schemas: {
+        User: {
+          type: "object",
+          properties: {
+            id: {
+              type: "integer",
+              description: "Användarens unika id",
+              example: 1,
+            },
+            name: {
+              type: "string",
+              description: "Användarens namn",
+              example: "Kajsa",
+            },
+          },
+        },
+        UserResponse: {
+          type: "object",
+          properties: {
+            message: {
+              type: "string",
+              description: "Bekräftelsemeddelande",
+            },
+            user: {
+              $ref: "#/components/schemas/User",
+            },
+          },
+        },
+      },
+    },
   },
   apis: ["./routes/*.js"],
 };

@@ -53,27 +53,15 @@ router.get("/", (req, res) => {
  *       required: true
  *       content:
  *         application/json:
- *           schema:
- *             type: object
- *             properties:
- *               name:
- *                 type: string
- *                 description: Namnet på användaren
- *                 example: Kajsa
+ *            schema:
+ *             $ref: '#/components/schemas/User'
  *     responses:
  *       201:
  *         description: Användare skapad
  *         content:
  *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 message:
- *                   type: string
- *                   description: Bekräftelsemeddelande
- *                 user:
- *                   type: object
- *                   description: Den nyskapade användaren
+ *            schema:
+ *               $ref: '#/components/schemas/UserResponse'
  */
 
 router.post("/", (req, res) => {
