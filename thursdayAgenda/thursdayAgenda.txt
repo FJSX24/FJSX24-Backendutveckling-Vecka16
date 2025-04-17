@@ -286,3 +286,71 @@ http://localhost:3000/api-docs
 -------------------------------------------------
 -------------------------------------------------
 Dags för att ni kodar övningar:
+
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+Diskussionsfrågor:
+
+🔁 Tema 1 – Routing och Struktur
+Diskussionsfrågor som fokuserar på hur vi strukturerar vår kod med routers:
+
+Varför tror ni att det är viktigt att dela upp olika delar av API:et i separata router-filer?
+
+Om en ny utvecklare öppnade ditt projekt – skulle hen förstå vad som händer bara genom att titta på routers och URL:er?
+
+Hur kan vi avgöra om en route hör hemma i en egen router-fil eller inte?
+
+Vilka risker finns om vi bara har all routing i index.js utan moduler?
+
+Hur kan man göra routers återanvändbara eller mer generiska?
+
+-------------------------------------------------
+🔧 Tema 2 – RESTful Best Practices
+Diskussionsfrågor kring REST och API-design:
+
+Vad betyder det att ett API är “RESTful” – och hur vet man att det verkligen är det?
+
+Vilka konkreta fördelar finns med att följa REST-principer?
+
+Varför är pluralform viktig i URL:er? Skulle det spela någon roll om man t.ex. skrev /user istället för /users?
+
+Var går gränsen mellan att ett API är “tydligt” och “för detaljerat”? Finns det en risk med att vara för exakt?
+
+Hur kan vi säkerställa att våra endpoints är “självförklarande”? Vad innebär det i praktiken?
+
+-------------------------------------------------
+🧠 Tema 3 – Skalbarhet, Dokumentation & Teamarbete
+Diskussionsfrågor med mer reflektion och koppling till verkliga projekt:
+
+Hur hjälper routers oss att bygga en applikation som kan växa över tid?
+
+Hur skulle ni förklara nyttan med Swagger till en icke-teknisk kollega?
+
+Hur påverkar god API-dokumentation (som Swagger) teamets samarbete?
+
+Tänk på ett större projekt – hur många routers tror ni är “lagom”? När blir det för många?
+
+Vilka utmaningar kan uppstå om flera personer arbetar samtidigt på olika delar av API:et? Hur kan man hantera det?
+
+-------------------------------------------------
+🧩 Tema 4 – Arkitektur: MVC och Headless vs Coupled / Monolithic / Traditional
+Fokus: övergripande systemstruktur och backendens roll
+
+💡 Tips innan diskussion:
+
+Se video om MVC: https://www.youtube.com/watch?v=Cgvopu9zg8Y
+
+Läs kort artikel eller Googla skillnaderna mellan Headless CMS, Monolithic, Coupled/Traditional arkitektur.
+
+Diskussionsfrågor:
+Hur passar routers in i ett MVC-upplägg? Vilken roll har de?
+
+Vad innebär “separation of concerns”, och hur ser vi det i vårt projekt?
+
+Hur skiljer sig ett Headless API från ett monolitiskt system?
+
+Vilka fördelar/nackdelar finns med att använda Headless-struktur jämfört med Coupled/Traditional?
+
+
+
