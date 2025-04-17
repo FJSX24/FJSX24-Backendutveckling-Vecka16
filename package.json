@@ -1,0 +1,18 @@
+{
+  "name": "fjsx24-backendutveckling-vecka16",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Tema: Express Router + API-design + Swagger",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
